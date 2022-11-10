@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script>
+    function nightDayHandler(self) {
+      let target = document.querySelector('body');
+      if(self.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value = 'day';
+
+        let alist = document.querySelectorAll('a');
+        let i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value = 'night';
+
+        let alist = document.querySelectorAll('a');
+        let i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
+    ">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>유럽입자물리연구소(CERN:European Organization for Nuclear Research)에서 얻어지는 엄청난 양의 연구결과
+    및 자료의 효율적인 공유를 목적으로 1989년 3월 Tim Berners의 제안으로 연구가 시작되어 개발되었으며,
+    WW 개발 이후 인터넷이 급속도로 발전하였다. 이는 메뉴 방식으로 서비스를 하던 기존의 인터넷 서비스에 견줘
+    하이퍼텍스트를 기반으로 이루어진 웹은 문서 활용에 엄청난 편리성을 제공하기 때문이다.
+  </p>
+</div>
+</div>
+</body>
+</html>
