@@ -19,5 +19,20 @@
       name["data scientist"] = "taeho";
       document.write("data scientist : "+name["data scientist"]+"<br>");
     </script>
+    <h2>Iterate</h2>
+    <script>
+       for(let key in name) {
+         document.write(key+' : '+name[key]+'<br>');
+       }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        name.showAll = function(){
+        for(let key in this) {
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      name.showAll();
+    </script>
   </body>
 </html>
